@@ -16,9 +16,6 @@ export class LoginPage {
         cy.contains('Logout').click({force: true})
         cy.get('.site-title').should('contain', 'Automation Playground')
     }
-    
-
-
 }
 
 export const loginPage = new LoginPage()
