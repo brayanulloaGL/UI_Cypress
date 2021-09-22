@@ -7,10 +7,10 @@ describe('Login Tests', () => {
     })
 
     it('Verify that the login functionality works as expected', () => {
-        loginPage.submitUsernameAndPassword('auto', 'auto')
+        loginPage.verifyLogin('auto', 'auto')
     })
 
     it('Verify that the logout functionality works as expected', () => {
-        loginPage.clickLogoutOption('auto', 'auto')
+        loginPage.verifyLogout('auto', 'auto')
     })
 })

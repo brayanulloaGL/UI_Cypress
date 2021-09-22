@@ -1,6 +1,6 @@
 export class LoginPage {
 
-    submitUsernameAndPassword(username, password){
+    verifyLogin(username, password){
         cy.contains('My account').click()
         cy.get('#username').type(username)
         cy.get('#password').type(password)
@@ -8,7 +8,7 @@ export class LoginPage {
         cy.contains('Logout').should('contain', 'Logout')
     }
 
-    clickLogoutOption(username, password){
+    verifyLogout(username, password){
         cy.contains('My account').click()
         cy.get('#username').type(username)
         cy.get('#password').type(password)
