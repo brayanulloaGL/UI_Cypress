@@ -10,7 +10,7 @@ describe('Cart Tests', () => {
         cartPage.verifyCartUpdate()
     })
 
-    it('Verify that an item can be successfully removed from the Cart', () => {
+    it('Verify that an item can be successfully removed from the cart', () => {
         cartPage.verifyCartDeleteItem()
     })
 
