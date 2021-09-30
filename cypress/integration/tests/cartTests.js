@@ -13,4 +13,8 @@ describe('Cart Tests', () => {
     it('Verify that an item can be successfully removed from the Cart', () => {
         cartPage.verifyCartDeleteItem()
     })
+
+    it('Verify that a variable product can be added to the cart correcty', () => {
+        cartPage.verifyVariableItemAdded()
+    })
 })

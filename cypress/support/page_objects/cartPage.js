@@ -18,6 +18,18 @@ export class CartPage{
         cy.get('.remove').click()
         cy.get('.woocommerce-message').should('contain', 'removed.')
     }
+
+    verifyVariableItemAdded(){
+        cy.contains('Shop').click()
+        cy.get('[data-product_id="12"]').click()
+        cy.get('#pa_color').select('Blue')
+        cy.get('#logo').select('Yes')
+        cy.get('.single_add_to_cart_button').click()
+        cy.wait(1000)
+        cy.contains('Cart').click({force: true})
+        cy.get('[data-title="Product"]').should('contain', 'Hoodie - Blue, Yes')
+        
+    }
 }
 
 export const cartPage = new CartPage()
