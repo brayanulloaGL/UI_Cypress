@@ -1,5 +1,5 @@
 {
-    "baseUrl": "http://52.14.147.231/",
+    "baseUrl": "http://0.0.0.0:8085/",
     "ignoreTestFiles": [ "**/1-getting-started/*", "**/2-advanced-examples/*" ],
     "viewportHeight": 1080,
     "viewportWidth": 1920
