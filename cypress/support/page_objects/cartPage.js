@@ -1,17 +1,5 @@
 export class CartPage{
-
-    //JSON
-
-    // {
-    //     "name": cy.get('[class="plus"]'),
-    // }
-
-    // En el test se llama el key con la variable del JSON para reutilizar el elemento
     
-    //1. Reutilizar selectores y metodos
-    //2. Para escoger el producto hacerlo de manera dinamica
-    //3. User y Pass con variables de ambiente
-
     verifyCartUpdate(){
         cy.contains('Shop').click()
         cy.get('[data-product_id="23"]').click()
@@ -44,3 +32,9 @@ export class CartPage{
 }
 
 export const cartPage = new CartPage()
+
+// UPDATES:
+
+    //1. Reutilizar selectores y metodos
+    //2. Para escoger el producto hacerlo de manera dinamica
+    //3. User y Pass con variables de ambiente
