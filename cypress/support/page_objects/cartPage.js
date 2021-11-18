@@ -10,7 +10,7 @@ export class CartPage{
     
     verifyCartUpdate(){
         cy.contains(cartSelectors.shopTab).click()
-        cy.clickProduct('Album')
+        cy.clickProduct('Album') //This is a Cypress Command
         cy.wait(1000)
         cy.contains(cartSelectors.cartButton).click({force: true})
         cy.get('[class="plus"]').click()
@@ -20,7 +20,7 @@ export class CartPage{
 
     verifyCartDeleteItem(){
         cy.contains(cartSelectors.shopTab).click()
-        cy.clickProduct('Belt')
+        cy.clickProduct('Belt') //This is a Cypress Command
         cy.wait(1000)
         cy.contains(cartSelectors.cartButton).click({force: true})
         cy.get('.remove').click()
@@ -29,7 +29,7 @@ export class CartPage{
 
     verifyVariableItemAdded(){
         cy.contains(cartSelectors.shopTab).click()
-        cy.clickProduct('Hoodie')
+        cy.clickProduct('Hoodie') //This is a Cypress Command
         cy.get('#pa_color').select('Blue')
         cy.get('#logo').select('Yes')
         cy.get('.single_add_to_cart_button').click()

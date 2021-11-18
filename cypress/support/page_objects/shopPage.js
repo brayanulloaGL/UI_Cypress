@@ -9,7 +9,7 @@ export class ShopPage {
     
     verifyProductInfo(){
         cy.contains(shopSelectors.shopTab).click()
-        cy.clickProduct('Beanie')
+        cy.clickProduct('Beanie') //This is a Cypress Command
         cy.wait(1000)
         cy.contains(shopSelectors.cartButton).click({force: true})
         cy.contains('Beanie').click()
