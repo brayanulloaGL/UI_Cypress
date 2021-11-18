@@ -41,8 +41,3 @@ export class CartPage{
 
 export const cartPage = new CartPage()
 
-// UPDATES:
-
-    //1. User y Pass con variables de ambiente / DONE
-    //2. Reutilizar selectores y metodos / DONE
-    //3. Para escoger el producto hacerlo de manera dinamica / DONE
