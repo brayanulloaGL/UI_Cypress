@@ -27,3 +27,8 @@
 Cypress.Commands.add('openHomePage', () => {
     cy.visit('/')
 })
+
+//This Cypress command contains the logic to be able to select the products dinamically
+Cypress.Commands.add('clickProduct', (productName) => {
+    cy.get('.woocommerce-loop-product__title').contains(productName).siblings('a').click();
+})

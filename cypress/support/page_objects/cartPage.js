@@ -10,7 +10,7 @@ export class CartPage{
     
     verifyCartUpdate(){
         cy.contains(cartSelectors.shopTab).click()
-        cy.get('[data-product_id="23"]').click()
+        cy.clickProduct('Album')
         cy.wait(1000)
         cy.contains(cartSelectors.cartButton).click({force: true})
         cy.get('[class="plus"]').click()
@@ -20,7 +20,7 @@ export class CartPage{
 
     verifyCartDeleteItem(){
         cy.contains(cartSelectors.shopTab).click()
-        cy.get('[data-product_id="16"]').click()
+        cy.clickProduct('Belt')
         cy.wait(1000)
         cy.contains(cartSelectors.cartButton).click({force: true})
         cy.get('.remove').click()
@@ -29,7 +29,7 @@ export class CartPage{
 
     verifyVariableItemAdded(){
         cy.contains(cartSelectors.shopTab).click()
-        cy.get('[data-product_id="12"]').click()
+        cy.clickProduct('Hoodie')
         cy.get('#pa_color').select('Blue')
         cy.get('#logo').select('Yes')
         cy.get('.single_add_to_cart_button').click()
@@ -45,4 +45,4 @@ export const cartPage = new CartPage()
 
     //1. User y Pass con variables de ambiente / DONE
     //2. Reutilizar selectores y metodos / DONE
-    //3. Para escoger el producto hacerlo de manera dinamica / PENDING
+    //3. Para escoger el producto hacerlo de manera dinamica / DONE

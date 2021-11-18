@@ -6,7 +6,7 @@ const loginSelectors = {
     passwordInput: '#password',
     loginButton: 'Log in',
     logoutButton: 'Logout',
-    siteTitle: '.site-title'
+    siteTitle: '.site-title',
 }
 
 export class LoginPage {

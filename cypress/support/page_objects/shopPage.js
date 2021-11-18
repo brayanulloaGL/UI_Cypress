@@ -9,7 +9,7 @@ export class ShopPage {
     
     verifyProductInfo(){
         cy.contains(shopSelectors.shopTab).click()
-        cy.get('[data-product_id="15"]').click()
+        cy.clickProduct('Beanie')
         cy.wait(1000)
         cy.contains(shopSelectors.cartButton).click({force: true})
         cy.contains('Beanie').click()
