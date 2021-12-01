@@ -1,3 +1,3 @@
-# UI_Cypress
+# ui_cypress
 
 Test
