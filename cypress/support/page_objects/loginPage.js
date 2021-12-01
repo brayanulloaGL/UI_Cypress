@@ -16,7 +16,7 @@ export class LoginPage {
         cy.get(loginSelectors.usernameInput).type(Cypress.env('username'))
         cy.get(loginSelectors.passwordInput).type(Cypress.env('password'))
         cy.contains(loginSelectors.loginButton).click()
-        cy.contains(loginSelectors.logoutButton).should('contain', 'Logout')
+        cy.contains(loginSelectors.logoutButton).should('contain', 'Logout') //assert en la capa de Tests - Best Practice
     }
 
     verifyLogout(){
@@ -25,7 +25,7 @@ export class LoginPage {
         cy.get(loginSelectors.passwordInput).type(Cypress.env('password'))
         cy.contains(loginSelectors.loginButton).click()
         cy.contains(loginSelectors.logoutButton).click({force: true})
-        cy.get(loginSelectors.siteTitle).should('contain', 'Automation Playground')
+        cy.get(loginSelectors.siteTitle).should('contain', 'Automation Playground') //assert en la capa de Tests - Best Practice
     }
 }
 

@@ -4,13 +4,14 @@ const cartSelectors = {
     shopTab: 'Shop',
     cartButton: 'Cart',
     woocommerceMessage: '.woocommerce-message',
+    productTitle: '.woocommerce-loop-product__title',
 }
 
 export class CartPage{
     
-    verifyCartUpdate(){
+    cartUpdate(productName){
         cy.contains(cartSelectors.shopTab).click()
-        cy.clickProduct('Album') //This is a Cypress Command
+        cy.clickProduct(productName) //This is a Cypress Command
         cy.wait(1000)
         cy.contains(cartSelectors.cartButton).click({force: true})
         cy.get('[class="plus"]').click()
@@ -18,9 +19,9 @@ export class CartPage{
         cy.get(cartSelectors.woocommerceMessage).should('contain', 'Cart updated.')
     }
 
-    verifyCartDeleteItem(){
+    verifyCartDeleteItem(productName){
         cy.contains(cartSelectors.shopTab).click()
-        cy.clickProduct('Belt') //This is a Cypress Command
+        cy.clickProduct(productName) //This is a Cypress Command
         cy.wait(1000)
         cy.contains(cartSelectors.cartButton).click({force: true})
         cy.get('.remove').click()
@@ -29,7 +30,7 @@ export class CartPage{
 
     verifyVariableItemAdded(){
         cy.contains(cartSelectors.shopTab).click()
-        cy.clickProduct('Hoodie') //This is a Cypress Command
+        cy.clickProduct(productName) //This is a Cypress Command
         cy.get('#pa_color').select('Blue')
         cy.get('#logo').select('Yes')
         cy.get('.single_add_to_cart_button').click()
@@ -40,4 +41,6 @@ export class CartPage{
 }
 
 export const cartPage = new CartPage()
+
+
 
