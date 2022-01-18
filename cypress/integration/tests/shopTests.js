@@ -8,5 +8,6 @@ describe('Shop Tests', () => {
 
     it('Verify that the product details section shows the content correctly', () => {
         shopPage.verifyProductInfo()
+        //Assert should be implemented here
     })
 })

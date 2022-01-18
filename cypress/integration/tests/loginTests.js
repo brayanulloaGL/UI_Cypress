@@ -9,11 +9,11 @@ describe('Login Tests', () => {
 
     it('Verify that the login functionality works as expected', () => {
         loginPage.verifyLogin()
-        //assert
+        //Assert should be implemented here
     })
 
     it('Verify that the logout functionality works as expected', () => {
         loginPage.verifyLogout()
-        //assert
+        //Assert should be implemented here
     })
 })
